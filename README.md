@@ -17,8 +17,6 @@ A1: nirS Amplicon Sequence variants (ASV) were inferred using dada2 (link to git
 
 A2: Quality checks: a) removal of sequences not annotated to “nirS” protein after Blastx and removal of sequences out of 220-240 bp using the script (nirS_Filter_positives.R). 
 
-A3: Removal of putative contaminant ASVs using the script (nirS_ContaRemoval.R) 
-
 A3: ASVs were translated to the nirS protein in a correct open reading frame (ORF) using TranslatorX, ORFfinder in NCBI. 
 
 ## Part B: nirS database and Taxonomic Assignment 
@@ -30,12 +28,14 @@ B2: Taxonomic assignment for nirS sequences were done using the script (nirS_Tax
 
 ## Part C: Data visualization and Statistics 
 
-C1: Alpha diversity estimates and statistical analysis were done using the script (nirS_AlphaDiversity.R).
+C1: Removal of putative contaminant ASVs using the script (nirS_ContaRemoval.R) 
 
-C2: Betadiversity Ordination plot and PERMANOVA were done using the script (nirS_BetaDiversity.R). 
+C2: Alpha diversity estimates and statistical analysis were done using the script (nirS_AlphaDiversity.R).
 
-C3: Barplots showing most abundant bacterial ASVs were visualized using the script (nirS_Barplot.R)
+C3: Betadiversity Ordination plot and PERMANOVA were done using the script (nirS_BetaDiversity.R). 
 
-C4: ASV enrichment analysis was done using the script (nirS_ANCOM.R)
+C4: Barplots showing most abundant bacterial ASVs were visualized using the script (nirS_Barplot.R)
 
-C5: Heatmap showing differential abundances of ASVs was plotted using the script (nirS_Heatmap.R)
+C5: ASV enrichment analysis was done using the script (nirS_ANCOM.R)
+
+C6: Heatmap showing differential abundances of ASVs was plotted using the script (nirS_Heatmap.R)
