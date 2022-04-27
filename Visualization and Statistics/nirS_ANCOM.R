@@ -2,7 +2,7 @@
 ###  ANCOM analysis ###
 #######################
 
-## Differential abundance analysis between samples
+## ASV Enrichment Analysis
 
 library(ANCOMBC)
 library(phyloseq)
