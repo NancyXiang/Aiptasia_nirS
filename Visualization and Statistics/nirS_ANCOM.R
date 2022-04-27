@@ -2,12 +2,13 @@
 ###  ANCOM analysis ###
 #######################
 
+## Differential abundance analysis between samples
+
 library(ANCOMBC)
 library(phyloseq)
 library("ape")
 library(tibble)
 library(ComplexHeatmap)
-
 
 setwd("~/WP3_Aiptasia_nirS/nirS_analysis/")
 
@@ -161,3 +162,4 @@ res1_H2_HAB_df_sig$Taxa=paste(asv$Phylum, asv$Family, asv$Genus,sep = "_")[match
 message("Number of DA ASVs: ", nrow(res1_H2_HAB_df_sig), "\nNumber of DA ASVs enriched in HA: ", nrow(subset(res1_H2_HAB_df_sig, Diff_more_abundant == "A" )), "\nNumber of DA ASVs enriched in HB: ", nrow(subset(res1_H2_HAB_df_sig, Diff_more_abundant == "B" )))
 # ASVs enriched in HA: 1; Number of DA ASVs enriched in HB: 1;
 write.table(res1_H2_HAB_df_sig,  "R_output/ANCOMBC_ASVs_Comp4_HA_HB.txt", sep = "\t", quote = F, row.names = T )
+
