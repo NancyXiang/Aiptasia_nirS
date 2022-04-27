@@ -1,5 +1,5 @@
 ############################################################
-#####################   NMDS  #############################
+##################### Beta-diversity  ######################
 ############################################################
 
 BiocManager::install("microbiome")
@@ -37,6 +37,7 @@ phy.all= phyloseq(otu.t, tax.t,  sam.t)
 
 
 ############ PCA ####################
+
 phy.t=microbiome::transform(phy.all, transform = "clr", target = "OTU", shift = 0, scale = 1)
 PCA = ordinate(phy.t, method = "RDA", distance = "euclidean")
 
@@ -50,6 +51,7 @@ dev.off()
 
 
 ############ NMDS ####################
+
 phy.t=microbiome::transform(phy.all, transform = "relative.abundance", target = "OTU", shift = 0, scale = 1) #NMDS,
 NMDS = ordinate(phy.t, method = "NMDS", distance =  "bray")
 pdf("./R_output/new_NMDS_ordination.pdf", width=6.5,height=3, pointsize = 12)
@@ -62,6 +64,7 @@ dev.off()
 
 
 ######## PcoA ###############
+
 phy.t=microbiome::transform(phy.all, transform = "relative.abundance", target = "OTU", shift = 0, scale = 1) #PcoA,
 PcoA = ordinate(phy.t, method = "PCoA", distance ="bray", weighted=TRUE)
 pdf("./R_output/new_PcoA_ordination.pdf", width=6.5,height=3, pointsize = 12)
@@ -73,11 +76,3 @@ plot_ordination(phy.t,PcoA, color = "symbiont", shape = "host") +
 dev.off()
 
 
-
-
-
-  geom_point(size = 5, alpha = 1) + theme_bw()  + ggtitle("") +
-  theme_classic() + scale_colour_manual(values=c(col_Symb)) +
-  #facet_wrap(~host, ncol=3, scales="free") +
-  ggtitle("PCoA on Bray Curtis distance")
-dev.off()
