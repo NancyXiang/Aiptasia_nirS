@@ -1,6 +1,6 @@
 # Denitrifiers in the Cnidarian Holobiont
 
-This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistical analysis. 
+This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistics. 
 
 Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia (in prep, 2022) 
 
