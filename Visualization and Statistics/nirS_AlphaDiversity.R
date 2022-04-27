@@ -37,8 +37,9 @@ asv.grp=merge(asv.rar, map, by="row.names")
 rownames(asv.grp)= asv.grp[,1]
 asv.grp=asv.grp[,-1]
 
-
-###plots prep ###########
+#############################
+########  Prep Plot  ########
+#############################
 
 alpha=as.data.frame(t(estimateR(asv.grp[, 2:428],  smallsample = TRUE))) # define the location of ASV
 alpha$Shannon=diversity(asv.grp[, 2:428], index = "shannon") # shannon
@@ -56,7 +57,7 @@ alpha$symbiont=gsub("None", "APO", alpha$symbiont)
 alpha$combine=paste(alpha$host, alpha$symbiont, sep = "_")
 
 #####################################################
-##################### boxplots ######################
+##################### boxplot  ######################
 #####################################################
 
 # Chao1 richness, Shannon diversity, Simpson evenness
