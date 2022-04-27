@@ -29,14 +29,16 @@ B2: Taxonomic assignment for nirS sequences were done using the script (nirS_Tax
 
 ## Part C: Data visualization and Statistics 
 
-C1: Removal of putative contaminant ASVs using the script (nirS_ContaRemoval.R) 
+C1: Removal of putative contaminant ASVs using the script (nirS_ContaRemoval.R).
 
-C2: Alpha diversity estimates and statistical analysis were done using the script (nirS_AlphaDiversity.R).
+C2: Alpha diversity and statistical analysis were done using the script (nirS_AlphaDiversity.R).
 
-C3: Betadiversity Ordination plot and PERMANOVA were done using the script (nirS_BetaDiversity.R). 
+C3: Betadiversity ordination was done using the script (nirS_BetaDiversity.R). 
 
-C4: Barplots showing most abundant bacterial ASVs were visualized using the script (nirS_Barplot.R)
+C4: Barplots showing most abundant bacterial ASVs were visualized using the script (nirS_Barplot.R).
 
-C5: ASV enrichment analysis was done using the script (nirS_ANCOM.R)
+C5: PERMANOVA and Betadispersion were done using the script (nirS_PERMANOVA.R)
 
-C6: Heatmap showing differential abundances of ASVs was plotted using the script (nirS_Heatmap.R)
+C6: ASV enrichment analysis was done using the script (nirS_ANCOM.R).
+
+C7: Heatmap showing differential abundances of ASVs was plotted using the script (nirS_Heatmap.R).
