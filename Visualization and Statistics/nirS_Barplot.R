@@ -65,3 +65,5 @@ ggarrange(Food_Algae, CC7_all, H2_all + rremove("x.text"),
           labels = c("A", "B", "C"),
           ncol = 1, nrow = 3)
 dev.off()
+
+
