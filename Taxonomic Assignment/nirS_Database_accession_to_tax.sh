@@ -2,6 +2,11 @@
 ### NCBI Accesion number_to_Taxonomic information   ###
 ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 
+# download 25,330 protein sequences from FunGene repository on 10 Jan 2022
+# 25,330 nirS protein sequences are attached in this folder  
+# get full taxonomy for each sequence by its identical accession ID 
+# prepare 25,330 protein sequences with full taxonomic information as a training database
+
 
 # extract Accession ID
 grep -o -E "^>\w+" nirS_prot_ref_25330.fasta | tr -d ">" >nirS_NCBI_accessionNumber
