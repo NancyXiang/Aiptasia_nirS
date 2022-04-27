@@ -1,6 +1,6 @@
 # Denitrifiers in the Cnidarian Holobiont
 
-This repository contains the R and Bash scripts for nirS amplicon sequence quality control, data visualization, and statistical analysis. 
+This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistical analysis. 
 
 Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia 
 
@@ -11,7 +11,7 @@ Raw sequencing data are deposited in the NCBI Sequence Read Archive (SRA) under 
 
 # Workflow
 
-## Part A: nirS Sequence Quality Control 
+## Part A: nirS Sequence Analysis
 
 A1: nirS Amplicon Sequence variants (ASV) were inferred using dada2 (link to github) using the script (nirS_Dada2.R).
 
