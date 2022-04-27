@@ -2,7 +2,7 @@
 
 This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistical analysis. 
 
-Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia 
+Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia (in prep, 2022) 
 
 Nan Xiang, Nils Rädecker, Claudia Pogoreutz, Anny Cárdenas, Anders Meibom, Christian Wild, Astrid Gärdes and Christian R Voolstra
 
@@ -18,6 +18,7 @@ A1: nirS Amplicon Sequence variants (ASV) were inferred using dada2 (link to git
 A2: Quality checks: a) removal of sequences not annotated to “nirS” protein after Blastx and removal of sequences out of 220-240 bp using the script (nirS_Filter_positives.R). 
 
 A3: ASVs were translated to the nirS protein in a correct open reading frame (ORF) using TranslatorX, ORFfinder in NCBI. 
+
 
 ## Part B: nirS database and Taxonomic Assignment 
 
