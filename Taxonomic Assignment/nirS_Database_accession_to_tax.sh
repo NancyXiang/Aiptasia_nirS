@@ -44,3 +44,4 @@ cat nirS_Tax_IDs | while read line ; do ete3 ncbiquery --search $line --info >> 
 # delete the # information line
 sed '/#/d' nirS_tax_info | cut -f 1,4 > nirS_accession_taxID_info
 paste nirS_NCBI_accessionNumber nirS_Tax_IDs nirS_accession_taxID_info >output_nirS_NCBI_accession_tax.txt
+
