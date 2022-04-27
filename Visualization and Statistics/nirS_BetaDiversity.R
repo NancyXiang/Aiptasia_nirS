@@ -35,6 +35,9 @@ sam.t= sample_data(data.frame(met))
 tax.t= tax_table(as.matrix(asv[, 43:ncol(asv)]))
 phy.all= phyloseq(otu.t, tax.t,  sam.t)
 
+####################
+#### Ordination ####
+####################
 
 ############ PCA ####################
 
