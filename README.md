@@ -2,7 +2,7 @@
 
 This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistics. 
 
-Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia (in prep, 2022) 
+Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia (paper in prep, 2022) 
 
 Nan Xiang, Nils Rädecker, Claudia Pogoreutz, Anny Cárdenas, Anders Meibom, Christian Wild, Astrid Gärdes and Christian R Voolstra
 
