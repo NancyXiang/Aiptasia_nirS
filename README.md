@@ -29,6 +29,7 @@ B2: Taxonomic assignment for nirS sequences were done using the script (nirS_Tax
 
 
 ## Part C: Data visualization and Statistics 
+Scripts from https://github.com/ajcardenasb?tab=repositories
 
 C1: Removal of putative contaminant ASVs using the script (nirS_ContaRemoval.R).
 
