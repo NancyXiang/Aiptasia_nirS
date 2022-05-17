@@ -7,7 +7,7 @@ Presence of algal symbionts enhances abundance and alters community structure of
 
 Nan Xiang, Nils Rädecker, Claudia Pogoreutz, Anny Cárdenas, Anders Meibom, Christian Wild, Astrid Gärdes and Christian R Voolstra
 
-Raw sequencing data are deposited in the NCBI Sequence Read Archive (SRA) under BioProject XXXX. 
+Raw sequencing data are deposited in the NCBI Sequence Read Archive (SRA) under BioProject PRJNA836569. 
 
 
 # Workflow
