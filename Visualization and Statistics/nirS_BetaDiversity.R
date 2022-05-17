@@ -39,43 +39,46 @@ phy.all= phyloseq(otu.t, tax.t,  sam.t)
 #### Ordination ####
 ####################
 
-############ PCA ####################
-
-phy.t=microbiome::transform(phy.all, transform = "clr", target = "OTU", shift = 0, scale = 1)
+#### PCA by Subsetting host ############
+phy.t=microbiome::transform(phy.all, transform = "clr", target = "OTU", shift = 0, scale = 1) 
 PCA = ordinate(phy.t, method = "RDA", distance = "euclidean")
 
-pdf("./R_output/new_PCA_ordination.pdf", width=6.5,height=3, pointsize = 12)
-plot_ordination(phy.t, PCA, color = "symbiont", shape = "host") +
-  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") +
+phy_CC7=subset_samples(phy.t, host == "CC7")
+phy_H2=subset_samples(phy.t, host == "H2")
+phy_AF=subset_samples(phy.t, host == "None")
+
+PCA_CC7 = ordinate(phy_CC7, method = "RDA", distance = "euclidean")
+PCA_H2 = ordinate(phy_H2, method = "RDA", distance = "euclidean")
+PCA_AF = ordinate(phy_AF, method = "RDA", distance = "euclidean")
+
+plot_CC7=plot_ordination(phy_CC7, PCA_CC7, color = "symbiont", shape = "host") + 
+  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") + 
   theme_classic() + scale_colour_manual(values=c(col_Symb)) +
-  facet_wrap(~host, ncol=3, scales="free") +
+  #facet_wrap(~host, ncol=3, scales="free") +
   ggtitle("PCA on Euclidean distance")
-dev.off()
 
-
-############ NMDS ####################
-
-phy.t=microbiome::transform(phy.all, transform = "relative.abundance", target = "OTU", shift = 0, scale = 1) #NMDS,
-NMDS = ordinate(phy.t, method = "NMDS", distance =  "bray")
-pdf("./R_output/new_NMDS_ordination.pdf", width=6.5,height=3, pointsize = 12)
-plot_ordination(phy.t,NMDS, color = "symbiont", shape = "host") +
-  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") +
+plot_H2=plot_ordination(phy_H2, PCA_H2, color = "symbiont", shape = "host") + 
+  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") + 
   theme_classic() + scale_colour_manual(values=c(col_Symb)) +
-  facet_wrap(~host, ncol=3, scales="free") +
-  ggtitle("NMDS on Bray Curtis distance")
-dev.off()
+  #facet_wrap(~host, ncol=3, scales="free") +
+  ggtitle("PCA on Euclidean distance")
 
-
-######## PcoA ###############
-
-phy.t=microbiome::transform(phy.all, transform = "relative.abundance", target = "OTU", shift = 0, scale = 1) #PcoA,
-PcoA = ordinate(phy.t, method = "PCoA", distance ="bray", weighted=TRUE)
-pdf("./R_output/new_PcoA_ordination.pdf", width=6.5,height=3, pointsize = 12)
-plot_ordination(phy.t,PcoA, color = "symbiont", shape = "host") +
-  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") +
+plot_AF=plot_ordination(phy_AF, PCA_AF, color = "symbiont", shape = "host") + 
+  geom_point(size = 3, alpha = 1) + theme_bw()  + ggtitle("") + 
   theme_classic() + scale_colour_manual(values=c(col_Symb)) +
-  facet_wrap(~host, ncol=3, scales="free") +
-  ggtitle("PCoA on Bray Curtis distance")
+  #facet_wrap(~host, ncol=3, scales="free") +
+  ggtitle("PCA on Euclidean distance")
+
+
+pdf("/Users/nanxiang/Desktop/PhD/WP3_Aiptasia_nirS/nirS_analysis/R_output/nirS_PCA_new.pdf", width=6,height=2.5, pointsize = 12)
+ggarrange(plot_AF, plot_CC7, plot_H2 + rremove("x.text"),
+          legend = "none",
+          labels = c("Algae and food", "CC7", "H2"),
+          ncol = 3, nrow = 1)
 dev.off()
+
+
+
+
 
 
