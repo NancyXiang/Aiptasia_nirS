@@ -3,12 +3,9 @@
 This repository contains the R and Bash scripts for nirS amplicon sequence analysis, data visualization, and statistics. 
 Code Developper: Anny Cárdenas, Nan Xiang.
 
-Presence of algal symbionts enhances abundance and alters community structure of denitrifying bacteria in Aiptasia (paper in prep, 2022) 
-
-Nan Xiang, Nils Rädecker, Claudia Pogoreutz, Anny Cárdenas, Anders Meibom, Christian Wild, Astrid Gärdes and Christian R Voolstra
+Nan Xiang, Nils Rädecker, Claudia Pogoreutz, Anny Cárdenas, Anders Meibom, Christian Wild, Astrid Gärdes, and Christian R Voolstra. Presence of algal symbionts affects denitrifying bacterial communities in the sea anemone Aiptasia coral model. ISME COMMUN. 2, 105 (2022). https://doi.org/10.1038/s43705-022-00190-9.
 
 Raw sequencing data are deposited in the NCBI Sequence Read Archive (SRA) under BioProject PRJNA836569. 
-
 
 # Workflow
 
